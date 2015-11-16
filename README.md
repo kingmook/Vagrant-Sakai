@@ -20,5 +20,12 @@ Configures:
 - JAVA_HOME
 - JAVA_OPTS
 
+Requires:
+- Vagrant
+- Virtual Box
+
+
+Inspiration and bits of code from https://github.com/steveswinsburg/mysql-vagrant and https://github.com/tiangolo/ansible-babun-bootstrap
+
 
 
