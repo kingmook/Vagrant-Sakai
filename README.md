@@ -13,7 +13,7 @@ Installs:
 - Maven 3.0
 - Mysql 
 - Mysql Java connector 5.1
-- Apereo Sakai Trunk
+- Apereo Sakai Trunk source code
 
 Configures:
 - CATALINA_HOME
@@ -23,6 +23,12 @@ Configures:
 Requires:
 - Vagrant
 - Virtual Box
+
+
+Use:
+- git clone https://github.com/kingmook/Vagrant-Sakai
+- vagrant up
+- wait a long time for it to download and configure all the requirements (~10-15 minutes)
 
 
 Inspiration and bits of code from https://github.com/steveswinsburg/mysql-vagrant and https://github.com/tiangolo/ansible-babun-bootstrap
