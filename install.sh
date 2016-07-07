@@ -5,6 +5,8 @@ echo "-- Installing Yum Group Development Tools --"
 
 yum -y -q groupinstall "Development Tools"
 
+yum -y -q install mysql-utilities mysql-devel
+
 echo "-- Yum Group Development Tools Installed --"
 
 
@@ -12,21 +14,22 @@ echo "-- Yum Group Development Tools Installed --"
 echo "-- Installing Tomcat 7 --"
 
 #get tomcat 7 from apache
-wget http://apache.parentingamerica.com/tomcat/tomcat-7/v7.0.65/bin/apache-tomcat-7.0.65.tar.gz -P /opt 1> NUL 2> NUL
+wget http://apache.parentingamerica.com/tomcat/tomcat-7/v7.0.70/bin/apache-tomcat-7.0.70.tar.gz -P /opt 1> NUL 2> NUL
 
 #untar
-tar -zxf /opt/apache-tomcat-7.0.65.tar.gz -C /opt
+tar -zxf /opt/apache-tomcat-7.0.70.tar.gz -C /opt
 
 #move the folder to just tomcat
-mv /opt/apache-tomcat-7.0.65 /opt/tomcat
+mv /opt/apache-tomcat-7.0.70.tar.gz /opt/tomcat
 
 #remove the archive
-rm -f /opt/apache-tomcat-7.0.65.tar.gz
+rm -f /opt/apache-tomcat-7.0.70.tar.gz
 
 #remove default webapps
 rm -rf /opt/tomcat/webapps/*
 
 echo "-- Tomcat Installed to /opt/tomcat --"
+
 
 
 # ----------------- Install Java 1.8 (8) ----------------- #
