@@ -14,16 +14,16 @@ echo "-- Yum Group Development Tools Installed --"
 echo "-- Installing Tomcat 7 --"
 
 #get tomcat 7 from apache
-wget http://apache.parentingamerica.com/tomcat/tomcat-7/v7.0.70/bin/apache-tomcat-7.0.70.tar.gz -P /opt 1> NUL 2> NUL
+wget http://apache.parentingamerica.com/tomcat/tomcat-7/v7.0.78/bin/apache-tomcat-7.0.78.tar.gz -P /opt 1> NUL 2> NUL
 
 #untar
-tar -zxf /opt/apache-tomcat-7.0.70.tar.gz -C /opt
+tar -zxf /opt/apache-tomcat-7.0.78.tar.gz -C /opt
 
 #move the folder to just tomcat
-mv /opt/apache-tomcat-7.0.70.tar.gz /opt/tomcat
+mv /opt/apache-tomcat-7.0.78 /opt/tomcat
 
 #remove the archive
-rm -f /opt/apache-tomcat-7.0.70.tar.gz
+rm -f /opt/apache-tomcat-7.0.78.tar.gz
 
 #remove default webapps
 rm -rf /opt/tomcat/webapps/*
@@ -117,7 +117,7 @@ chkconfig mysqld on
 cd /opt
 wget http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.37.tar.gz 1> NUL 2> NUL
 tar -xzf mysql-connector-java-5.1.37.tar.gz -C /opt
-mv /opt/mysql-connector-java-5.1.37/mysql-connector-java-5.1.37-bin.jar /opt/tomcat/common/lib
+mv /opt/mysql-connector-java-5.1.37/mysql-connector-java-5.1.37-bin.jar /opt/tomcat/lib
 rm -rf /opt/mysql-connector-java-5.1.37
 
 echo "-- Mysql Installed --"
